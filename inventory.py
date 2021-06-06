@@ -5,6 +5,7 @@ import csv
 import ast
 
 
+# this is the main menu where the user selects what he wants to do
 def main():
     """Main entry point of function.
     This program is a product inventory management system
