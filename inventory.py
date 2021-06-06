@@ -5,6 +5,7 @@ import csv
 import ast
 
 
+# this is the main menu where the user selects what he wants to do
 def main():
     print('*********************************')
     print('*                               *')
