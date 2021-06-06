@@ -7,6 +7,9 @@ import ast
 
 # this is the main menu where the user selects what he wants to do
 def main():
+    """Main entry point of function.
+    This program is a product inventory management system
+    """
     print('*********************************')
     print('*                               *')
     print('*   Menu: 1 - Add Products      *')
@@ -28,8 +31,13 @@ def main():
 
 
 def add_product():
+    """
+    This function adds a product into the products database.
+    The product.csv should be in the local directory relative to this program
+    """
     prod_dict = {}
 
+    #read in a CSV from storage to add existing products
     file_name = 'E:/Buds Files/Work Files/Revature/Training/Exercises/Python/Project0/product.csv'
     if os.path.exists(file_name):
         prod_file = open(file_name)
@@ -39,6 +47,7 @@ def add_product():
                 prod_dict[int(row[0])] = row[1]     #str, str
         prod_file.close()
 
+    #give user option to add more products
     add_more = True
     while add_more:
         prompt = 'Please enter product id, product name, unit price, order price, and unit (separated by commas):\n'
@@ -50,6 +59,7 @@ def add_product():
         if input(prompt).upper() == 'N':
             add_more = False
 
+    #once the user has added all of the products, write products to file.
     if os.path.exists(file_name):
         os.remove(file_name)
 
@@ -60,6 +70,7 @@ def add_product():
         writer.writerow([key, value])
     prod_file.close()
 
+    #print out all of the products
     print('List of Products:')
     print('')
     print('Prod ID\tProd Name\tUnit_Price\tOrder Price\tUnit')
@@ -76,8 +87,13 @@ def add_product():
 
 
 def add_inventory():
+    """
+    This function adds items to the inventory database.
+    The inventory items are stored in `inventory.csv`, which is local to the program
+    """
     prod_dict = {}
 
+    #reads in existing inventory items from the inventory.csv file.
     file_name = 'E:/Buds Files/Work Files/Revature/Training/Exercises/Python/Project0/inventory.csv'
     if os.path.exists(file_name):
         prod_file = open(file_name)
@@ -87,6 +103,7 @@ def add_inventory():
                 prod_dict[int(row[0])] = row[1]     #str, str
         prod_file.close()
 
+    #Adds more inventory items based on user input.
     add_more = True
     while add_more:
         prompt = 'Please enter product id, stock qty, reorder level, and reorder qty (separated by commas):\n'
@@ -98,6 +115,7 @@ def add_inventory():
         if input(prompt).upper() == 'N':
             add_more = False
 
+    #writes out the new modified inventory back into the file.
     if os.path.exists(file_name):
         os.remove(file_name)
 
@@ -108,6 +126,7 @@ def add_inventory():
         writer.writerow([key, value])
     prod_file.close()
 
+    #outputs the inventory
     print('Inventory of Products:')
     print('')
     print('Prod ID\tStock Qty\tReorder Level\tReorder Qty')
