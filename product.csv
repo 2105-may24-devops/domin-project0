@@ -10,3 +10,6 @@
 9,"{'prod_desc': 'ink cartridge', 'unit_price': 51.99, 'order_price': 39.37, 'unit': 'pc'}"
 10,"{'prod_desc': 'cd-rom', 'unit_price': 1.47, 'order_price': 1.17, 'unit': 'pc'}"
 11,"{'prod_desc': 'zip drive', 'unit_price': 125.25, 'order_price': 110.38, 'unit': 'pc'}"
+12,"{'prod_desc': 'label', 'unit_price': 0.4, 'order_price': 0.25, 'unit': 'box'}"
+13,"{'prod_desc': 'book', 'unit_price': 78.22, 'order_price': 52.33, 'unit': 'pc'}"
+14,"{'prod_desc': 'stapler', 'unit_price': 12.88, 'order_price': 8.95, 'unit': 'box'}"
