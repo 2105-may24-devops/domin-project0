@@ -1,0 +1,6 @@
+---
+- name: inventory program playbook
+  hosts: all
+  tasks:
+  - name: use the module ping. Ping servers now
+    ping:
